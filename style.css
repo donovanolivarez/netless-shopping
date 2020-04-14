@@ -1,0 +1,68 @@
+header {
+    background: #5CDB95;
+    padding: 60px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
+ul {
+    margin :0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+li {
+    display: inline;
+    margin: 15px;
+    
+}
+
+body {
+    font-family: 'Arvo', serif;
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+}
+
+.title {
+    font-size: 45px;
+}
+
+.essential-items-home {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    margin: 10px;
+    padding: 10px;
+    border-color: white;
+    background: #05386B;
+}
+
+.essential-items-home figure {
+    text-align: center;
+    margin: 20px;
+    padding-top:  60px;
+}
+
+.essential-items-home figure img {
+    border-radius: 2.5px;
+    width: 200px;
+}
+
+.group-label {
+    margin: 10px;
+    padding-bottom: 60px;
+    font-size: 20px;
+}
+

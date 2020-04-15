@@ -1,0 +1,27 @@
+{
+  "name": "netless-shopping",
+  "version": "1.0.0",
+  "description": "netless-shopping",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donovanolivarez/netless-shopping.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/donovanolivarez/netless-shopping/issues"
+  },
+  "homepage": "https://github.com/donovanolivarez/netless-shopping#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.3",
+    "mongoose": "^5.9.9",
+    "nodemon": "^2.0.3"
+  }
+}

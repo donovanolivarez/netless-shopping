@@ -12,7 +12,7 @@ application.use(bodyparser.urlencoded({
 
 application.use(bodyparser.json());
 
-application.use(express.static(path.join(__dirname, 'public')));
+application.use(express.static(path.join(__dirname, 'views')));
 
 
 application.listen("3000", ()=>{

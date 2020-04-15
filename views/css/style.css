@@ -1,0 +1,111 @@
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+header {
+    background: #5CDB95;
+    padding: 60px;
+    border-radius: 4px;
+}
+
+/* navigation */
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+ul {
+    margin :0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a { text-decoration: none; }
+
+a:hover { text-decoration: underline; }
+
+/* home page boxes */
+
+li {
+    display: inline;
+    margin: 15px;
+}
+
+body {
+    font-family: 'Arvo', serif;
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+}
+
+.title { 
+    font-size: 45px; 
+    margin-right: auto;
+}
+
+.essential-items-home {
+    background: #05386B;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 10px;
+}
+
+.essential-items-home figure {
+    text-align: center;
+    margin: 20px;
+    padding-top:  60px;
+}
+
+.essential-items-home figure img {
+    border-radius: 2.5px;
+    width: 200px;
+}
+
+.container-label {
+    text-align: center;
+    font-size: 30px;
+    margin: auto;
+}
+
+.item-container {
+    justify-content: center;
+    background-color:#05386B;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 25px;
+}
+
+.item-container .item {
+    display: inline;
+    margin: 20px;
+    padding: 20px;
+}
+
+.item-container .item figcaption {
+    text-align: center;
+    margin: 10px;
+}
+
+
+/* rule for all images to stay the same size. May need to change if it becomes an issue. */
+img{
+    float: left;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+}
+
+footer {
+    background-color: #EDF5D1;
+    text-align: center;
+}
+
+.search-bar {   
+
+}

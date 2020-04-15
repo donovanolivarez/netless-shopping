@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>netless shopping</title>
-    <link rel="stylesheet" type="text/css" href="style.css  ">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -19,22 +19,38 @@
         </nav>
     </header>
 
-    <section class="essential-items-home">
 
-        <div class="group-label">
-            <h4>Essentials</h4>
-        </div>
+    <div class="container-label">
+        <h4>Essentials</h4>
+    </div>
 
-        <figure>
-            <a href="list.html"><img src="img/cleaning-products/Purell-Instant-Hand-Sanitizers.jpg" alt="clean hands sanitize"></a>
-            <link href="about.html">
+    <section class="item-container">
+        <figure class="item">
             <figcaption>Hand Sanitizer</figcaption>
+            <a href="list.html"><img src="img/cleaning-products/Purell-Instant-Hand-Sanitizers.jpg" alt="clean hands sanitize"></a>
+            <link href="about.html">  <!--  must link to item detail page instead. -->
         </figure>
 
-        <figure>
-            <img class="next-prod" src="img/cleaning-products/Purell-Instant-Hand-Sanitizers.jpg" alt="clean hands sanitize">
-            <figcaption>Hand Sanitizer</figcaption>
-        </figure>        
+        <!--  <div class="break"></div>   acts like a line break for the items. -->   
+
+        <figure class="item">
+            <figcaption>Toilet Paper</figcaption>
+            <img class="next-prod" src="img/cleaning-products/toilet-paper.jpg" alt="clean hands sanitize">
+        </figure>
+        <figure class="item">
+            <figcaption>Toilet Paper</figcaption>
+            <img class="next-prod" src="img/cleaning-products/toilet-paper.jpg" alt="clean hands sanitize">
+        </figure>    
+        <figure class="item">
+            <figcaption>Toilet Paper</figcaption>
+            <img class="next-prod" src="img/cleaning-products/toilet-paper.jpg" alt="clean hands sanitize">
+        </figure>
+        
+        <div class="break"></div>
+        <figure class="item">
+            <figcaption>Toilet Paper</figcaption>
+            <img class="next-prod" src="img/cleaning-products/toilet-paper.jpg" alt="clean hands sanitize">
+        </figure>            
     </section>
 
     <section class="electro-items-home"></section>

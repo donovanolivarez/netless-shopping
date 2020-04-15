@@ -1,7 +1,14 @@
+.break {
+    flex-basis: 100%;
+    height 0;
+}
+
 header {
     background: #5CDB95;
     padding: 60px;
 }
+
+/* navigation */
 
 nav {
     display: flex;
@@ -22,10 +29,11 @@ a:hover {
     text-decoration: underline;
 }
 
+/* home page boxes */
+
 li {
     display: inline;
     margin: 15px;
-    
 }
 
 body {
@@ -40,13 +48,11 @@ body {
 }
 
 .essential-items-home {
+    background: #05386B;
     display: flex;
     flex-direction: row;
-    align-items: stretch;
     margin: 10px;
     padding: 10px;
-    border-color: white;
-    background: #05386B;
 }
 
 .essential-items-home figure {
@@ -60,9 +66,43 @@ body {
     width: 200px;
 }
 
-.group-label {
-    margin: 10px;
-    padding-bottom: 60px;
-    font-size: 20px;
+.container-label {
+    text-align: center;
+    font-size: 30px;
+    margin: auto;
 }
 
+.item-container {
+    justify-content: center;
+    background-color:#05386B;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 25px;
+}
+
+.item-container .item {
+    display: inline;
+    margin: 20px;
+    padding: 20px;
+}
+
+.item-container .item figcaption {
+    text-align: center;
+    margin: 10px;
+}
+
+
+/* rule for all images to stay the same size. May need to change if it becomes an issue. */
+img{
+    float: left;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+}
+
+footer {
+    background-color: #EDF5D1;
+    text-align: center;
+}

@@ -1,12 +1,14 @@
 const express = require('express');
 const router = express.Router();
+const viewController = require('../controllers/viewController');
+// routes to switch between pages
 
-router.get('/', (req, res)=>{
-    res.render('../views/index');
-});
+router.get('/',viewController.homeView);
 
-router.get('/categories', (req,res) => {
-    res.send('stuff on the categories page.')
-})
+router.get('/categories', viewController.categoryView);
+
+router.get('/account',viewController.accountView);
+
+router.get('/cart',viewController.accountView);
 
 module.exports = router;

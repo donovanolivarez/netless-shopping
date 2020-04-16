@@ -1,21 +1,43 @@
-const connection = require("./models");
-const express = require("express");
-const application = express();
-const path = require("path");
-const expressHandlebars = require("express-handlebars");
-const bodyparser = require("body-parser");
-const ItemController = require("./controllers/itemController")
+const connection = require('./models');
+const express = require('express');
+const path = require('path');
+const expressHandlebars = require('express-handlebars');
+const bodyparser = require('body-parser');
+const indexRoute = require('./routes/indexRoutes');
+const cartRouter = require('./routes/cartRoutes');
+const itemRouter = require('./routes/itemRoutes');
 
-application.use(bodyparser.urlencoded({
-    extended : true
+const app = express();
+
+
+app.use(bodyparser.urlencoded({
+    extended: true
 }));
 
-application.use(bodyparser.json());
+/*
+app.get('/home', (req, res)=> {
+    res.redirect('/index');
+});
+*/
 
-application.use(express.static(path.join(__dirname, 'views')));
+app.use('/', indexRoute);
+app.use('/cart', cartRouter);
+app.use('/item', itemRouter);
+
+app.set('views', path.join(__dirname, '/views'));
+
+app.engine('hbs',expressHandlebars({
+    extname : 'hbs', 
+    defaultLayout : 'mainLayout',
+    layoutsDir : __dirname + '/views/layouts'
+}));
+
+app.set('view engine', 'hbs');
+
+app.use(express.static(path.join(__dirname, 'pub')));
 
 
-application.listen("3000", ()=>{
-    console.log("Server started");
+app.listen('3000', ()=>{
+    console.log('server started');
 });
 

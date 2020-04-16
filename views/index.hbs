@@ -1,0 +1,35 @@
+<header>
+    <nav>
+        <div class="title"><a href="/">netless</a></div>
+        <ul>
+            <li><a href="categories">categories</a></li>
+            <li><a href="cart">my cart</a></li>
+            <li><a href="account">account</a></li>
+            <!--  
+                <form method="GET" action="../controllers/itemController.js">
+                    <input class="search-bar" type="text" placeholder="search..."/>
+                </form>-->
+        </ul>
+    </nav>
+</header>
+
+
+<div class="container-label">
+    <h4>Essentials</h4>
+</div>
+
+<section class="item-container">
+    {{#each data}}
+    <figure class="item">
+        <figcaption>{{{this.itemName}}}</figcaption>
+        <a href="item-view.html"><img src="img/cleaning-products/Purell-Instant-Hand-Sanitizers.jpg"
+                alt="clean hands sanitize"></a>
+    </figure>
+    {{/each}}
+</section>
+
+<section class="electro-items-home"></section>
+
+<footer>
+    a website by don and john
+</footer>

@@ -9,3 +9,4 @@ mongoose.connect('mongodb://localhost:27017/netless', { useNewUrlParser: true, u
     }   
 });
 
+require('../config/passport');

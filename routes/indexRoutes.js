@@ -9,6 +9,6 @@ router.get('/categories', viewController.categoryView);
 
 router.get('/account',viewController.accountView);
 
-router.get('/cart',viewController.accountView);
+router.get('/cart',viewController.cartView);
 
 module.exports = router;

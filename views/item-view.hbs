@@ -13,24 +13,13 @@
         </nav>
     </header>
 
+    {{#each data}}
     <div class="container-label">
-        <h4>All Categories</h4>
+        <h4>{{this.itemName}} {{this.itemPrice}}</h4>
     </div>
-
+    {{/each}}
     <section class="item-container">
-        <figure class="item">
-            <figcaption>Cleaning Products</figcaption>
-            <img src="https://lh3.googleusercontent.com/n_LD7gLBQTyhY1YHkMV-B9LJuTga8q2qgX_skCd0rKdTfjd_uftW3vjWz0XE1inghqI1YrD4GLQziuNM_1XkEg7S5twcwUO78gxPf26eju5_o9MUhjBR5HhYxPP3j_4kpbLIu6UKIA=w2400">
-        </figure>
 
-        <figure class="item">
-            <figcaption>Electronics</figcaption>
-            <img src="">
-        </figure>
-        <figure class="item">
-            <figcaption>School Supplies</figcaption>
-            <img src="">
-        </figure>
     </section>
 
     <footer>

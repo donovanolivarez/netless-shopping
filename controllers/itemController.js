@@ -7,5 +7,18 @@ const Item = require('../models/item');
 // adds to the url path specified in index.
 
 exports.itemDetail = function(req,res) {
-    res.send('item deatil page');
+    // get the item id
+    // display correct item information in the item view page
+    res.render('../views/item-view');
 }
+
+
+// displays all things in the item model.
+exports.getItemInfo = function(req, res) {
+    ItemModel.find((err,docs)=> {
+        if (!err){
+            res.render("../views/item-view", { data : docs } );
+        }
+    }
+).lean()};
+

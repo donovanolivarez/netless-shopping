@@ -34,7 +34,7 @@ app.engine('hbs',expressHandlebars({
 
 app.set('view engine', 'hbs');
 
-app.use(express.static(path.join(__dirname, 'pub')));
+app.use(express.static(path.join(__dirname, '/pub')));
 
 
 app.listen('3000', ()=>{

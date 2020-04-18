@@ -13,13 +13,14 @@
         </nav>
     </header>
 
-    {{#each data}}
-    <div class="container-label">
-        <h4>{{this.itemName}} {{this.itemPrice}}</h4>
-    </div>
-    {{/each}}
-    <section class="item-container">
 
+    <section class="item-container">
+        {{#each data}}
+        <figure class="item">
+        <figcaption>{{this.itemName}}</figcaption>
+        <a href="/item"><img src="{{ this.imagePath }}" alt="clean hands sanitize"></a>
+    </figure>
+    {{/each}}
     </section>
 
     <footer>

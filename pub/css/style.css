@@ -106,6 +106,6 @@ footer {
     text-align: center;
 }
 
-.search-bar {   
-
+.item-container .item .button {
+    align-items: center;
 }

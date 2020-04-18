@@ -15,10 +15,6 @@ exports.itemDetail = function(req,res) {
 
 // displays all things in the item model.
 exports.getItemInfo = function(req, res) {
-    ItemModel.find((err,docs)=> {
-        if (!err){
-            res.render("../views/item-view", { data : docs } );
-        }
-    }
-).lean()};
+    console.log(req.params.id);
+};
 

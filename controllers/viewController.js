@@ -7,7 +7,7 @@ exports.homeView = function(req,res) {
         for(var i = 0; i < docs.length; i += chunkSize){
             itemChunks.push(docs.slice(i, i + chunkSize));
         }
-        res.render('../views/index',  {itemName: "Toilet Paper", items: itemChunks});
+        res.render('../views/index',  {items: itemChunks});
     }).lean();
 };
 

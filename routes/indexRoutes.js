@@ -17,5 +17,8 @@ router.get('/account', viewController.accountView);
 
 router.get('/cart',viewController.cartView);
 
+router.get('item-view', (req, res) => {
+    res.send('details');
+})
 
 module.exports = router;

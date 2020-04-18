@@ -72,7 +72,7 @@ body {
 }
 
 .item-container {
-    justify-content: center;
+    justify-content: space-around;
     background-color:#05386B;
     border-radius: 5px;
     display: flex;
@@ -82,7 +82,7 @@ body {
 }
 
 .item-container .item {
-    display: inline;
+    display: inline-block;
     margin: 20px;
     padding: 20px;
 }
@@ -108,4 +108,8 @@ footer {
 
 .item-container .item .button {
     align-items: center;
+}
+
+.item .details {
+    text-align: center;
 }

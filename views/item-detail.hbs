@@ -15,12 +15,11 @@
 
 
     <section class="item-container">
-        {{#each data}}
         <figure class="item">
-        <figcaption>{{this.itemName}}</figcaption>
-        <a href="/item"><img src="{{ this.imagePath }}" alt="clean hands sanitize"></a>
-    </figure>
-    {{/each}}
+            <figcaption>{{ data.itemName }}</figcaption>
+            <a href="/item/:id"><img src="{{ data.imagePath }}" alt="clean hands sanitize"></a>
+        </figure>
+        <h1>${{data.itemPrice}}</h1>
     </section>
 
     <footer>

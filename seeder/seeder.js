@@ -18,7 +18,7 @@ var items = [
     new Item({
         imagePath: "https://lh3.googleusercontent.com/pbQ838bYGyDDlGWNE8TMj9hrUG6U8-0kpiXZwqoVTg6t4V5Yys-MTP2ZLviWQQTpu29FVhrdVQ_2M1hDlKUgSjW58nZczYIJbWZFkLvqXRLfp0ngnGU8uVy3w0Yaj9Fq44q3Ji51kQ=w2400",
         itemName: "Toilet Paper",
-        itemPrice: 10,
+        itemPrice: '10',
         itemCat: "cleaning",
         description: "This is in limited supply, buy now!"
     }),
@@ -26,7 +26,7 @@ var items = [
     new Item({
         imagePath: "https://lh3.googleusercontent.com/KyXUiSxZg-e5k1CkwoYMU_so1K2QVg560TjdYf0RSNPgcHwtEFSNm4YVEchpTWmf1XOetVJjbOMQj83LWwUqm-MBPIeu74lymhwVeIQxU5klMs3dPKmj1c0ur2Ax7YkiWbfke_fPWg=w2400",
         itemName: "Hand Sanitizer",
-        itemPrice: 5,
+        itemPrice: '5',
         itemCat: "cleaning",
         description: "Clean your hands often with this product!"
     }),
@@ -35,7 +35,7 @@ var items = [
     new Item({
         imagePath: "https://lh3.googleusercontent.com/-qxVOiVYjEG5Nizi0A9CZsqnOBvtfUV-WGyKIualApMCTaobXHWX5L59vjSvURqUwhpibYRYU2i-ZVTG-XipS2UQR6v3P_w5Mz0whDH-PnDocAHJwPwlZn0Gb-z-HDCypyx0P6GtSA=w2400",
         itemName: "Disinfectant Spray",
-        itemPrice: 6,
+        itemPrice: '6',
         itemCat: "cleaning",
         description: "Smells great, too!"
     }),

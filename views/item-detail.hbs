@@ -13,13 +13,26 @@
         </nav>
     </header>
 
+    <div class="container-label">
+        <h4>{{data.itemName}}</h4>
+    </div>
 
     <section class="item-container">
-        <figure class="item">
-            <figcaption>{{ data.itemName }}</figcaption>
-            <a href="/item/:id"><img src="{{ data.imagePath }}" alt="clean hands sanitize"></a>
+        <figure class="item-image">
+            <a href="/item/{{data._id}}/item-detail"><img src="{{ data.imagePath }}" alt="clean hands sanitize"></a>
+            <div class="break"></div>
         </figure>
-        <h1>${{data.itemPrice}}</h1>
+
+        <figure  class="item-details">
+            <h1>${{data.itemPrice}}</h1>
+            <p>{{data.description}}</p>
+        </figure>
+
+        <div class="break"></div>
+
+         <figure class="buy-btn">
+            <button class="btn">Add to cart</button>
+        </figure>
     </section>
 
     <footer>

@@ -72,19 +72,21 @@ body {
 }
 
 .item-container {
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color:#05386B;
     border-radius: 5px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 25px;
+    /* margin: 25px;  */
+    margin: auto;
 }
 
 .item-container .item {
-    display: inline-block;
+    display: inline;
     margin: 20px;
     padding: 20px;
+    flex-grow: 0;
 }
 
 .item-container .item figcaption {
@@ -104,12 +106,26 @@ img{
 footer {
     background-color: #EDF5D1;
     text-align: center;
+    margin: 10px;
+    padding: 10px;
 }
 
-.item-container .item .button {
-    align-items: center;
+.item-image {
+    justify-self: center;
 }
 
-.item .details {
+.item-details {
     text-align: center;
+}
+.buy-btn .btn {
+    background-color: #D4AF37; /* Green */
+    border: none;
+    color: white;
+    padding: 20px 75px;
+    align-self: flex-end;
+    text-align: center;
+    justify-self: baseline;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
 }

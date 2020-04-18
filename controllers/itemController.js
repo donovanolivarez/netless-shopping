@@ -12,12 +12,10 @@ exports.itemDetail = function(req,res) {
     // res.render('../views/item-view');
     // console.log(req.params.id);
     var id = req.params.id;
-    console.log(id);
     ItemModel.findById(req.params.id, (err, result)=> {
         if (!err) {
             res.render('item-detail' , {data: result, layout: 'itemLayout'} );
         }
-        console.log(err);
     }).lean();
 };
 

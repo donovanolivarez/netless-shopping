@@ -10,6 +10,30 @@ const validator = require('express-validator');
 const async = require('async');
 // implementations defined here, called from the router files.
 
+
+// array of cart ids will use when determining where to save an item.
+var cartIds = [];
+
+function addCartId(cartId){
+    cartIds.push(cartId);
+    return;
+}
+
+function printCartIds(){
+    for (var id of cartIds) {
+        console.log(id);
+        return;
+    }
+}
+
+function emptyCartModel () {
+    CartModel.deleteMany({}, function(err, result) {
+        console.log(result);
+        cartIds.pop();
+    }).lean();
+}
+
+
 exports.addToCart_get = function(req,res) {
 
 }
@@ -19,8 +43,6 @@ module.exports.addToCart_post = function(req,res) {
         var totalPrice = CartModel.totalPrice || 0;
         var price = docs.toObject().itemPrice;
         totalPrice += price;
-
-        // var items = [docs.itemName, docs.itemPrice, docs.imagePath]
 
          if (!err) {
             
@@ -38,6 +60,7 @@ module.exports.addToCart_post = function(req,res) {
                           result.save();
                         })
                 } else {
+
             CartModel.create( { items: docs.toObject(), totalPrice: totalPrice }, (err, result,done)=> {
                 addCartId(result._id);
             });
@@ -61,32 +84,5 @@ module.exports.placeOrder = function (req, res) {
         OrderModel.create( {cart: docs})
         res.redirect('/');
     });
+    emptyCartModel();
 };
-
-
-// array of cart ids will use when determining where to save an item.
-var cartIds = [];
-
-function addCartId(cartId){
-    cartIds.push(cartId);
-    return;
-}
-
-function printCartIds(){
-    for (var id of cartIds) {
-        console.log(id);
-        return;
-    }
-}
-
-
-        /*
-        CartModel.create(docs, {itemPrice: docs.itemPrice, itemName: docs.itemName, imagePath: docs.imagePath})
-        
-        .then(()=> {
-            console.log(docs._id);
-        })
-        .catch((reject)=> {
-            console.log(reject);
-        });
-        */

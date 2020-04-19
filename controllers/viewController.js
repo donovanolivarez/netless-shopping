@@ -1,5 +1,5 @@
-const Item = require('../models/item');
 const mongoose = require('mongoose');
+const Item = require('../models/item');
 const Cart = require('../models/cart');
 const CartModel = mongoose.model('cart');
 const ItemModel = mongoose.model('items');
@@ -38,15 +38,14 @@ exports.viewAllSchoolItems = function(req, res) {
 }
 
 exports.accountView = function(req,res) {
-    
+
     res.render('../views/account');
 }
 
 exports.cartView = function(req,res) {
     CartModel.find( {}, function(err, docs) {
         var itemsInCart = [];
-        for (var i = 0; i < docs.length; i ++){
-            // console.log(docs[i]._id);
+        for (var i = 0; i < docs.length; i ++) {
             for(var j = 0; j < docs[i].items.length; j ++) {
                 itemsInCart.push(docs[i].items[j]);
             }
@@ -54,6 +53,7 @@ exports.cartView = function(req,res) {
 
         if (itemsInCart === undefined || itemsInCart.length == 0){
             // render another view telling the user there are no items.
+            // don't have to do this 
         } else {
             res.render('../views/cart', {items: itemsInCart, layout: 'itemLayout'});
         }

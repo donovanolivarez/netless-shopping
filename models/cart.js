@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 var CartSchema = new mongoose.Schema({
-    itemName:String,
-    imagePath:String,
-    itemPrice:Number,
-    items: Array
+    itemName: {type: String},
+    imagePath:{type: String},
+    itemPrice:{type: Number},
+    items: []
     /*
     items: [{
         itemName: String,

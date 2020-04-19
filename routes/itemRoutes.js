@@ -8,6 +8,8 @@ ItemModel = mongoose.model('items');
 
 router.get('/:id/item-detail', itemController.itemDetail);
 
+
+/*
 router.get('/item-detail', (req, res) => {
     res.send('details');
 })

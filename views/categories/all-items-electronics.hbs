@@ -1,0 +1,30 @@
+<header>
+    <nav>
+        <div class="title"><a href="/">netless</a></div>
+        <ul>
+            <li><a href="../categories">categories</a></li>
+            <li><a href="../cart">my cart</a></li>
+            <li><a href="../account">account</a></li>
+            <input class="search-bar" type="text" placeholder="search..." />
+        </ul>
+    </nav>
+</header>
+
+
+   <div class="container-label">
+        <h4>Items in Electronics</h4>
+    </div>
+
+
+    <section class="item-container">
+        {{#each data}}
+        <figure class="item">
+            <figcaption>{{this.itemName}}</figcaption>
+            <a href="/item/{{this._id}}/item-detail"><img src="{{ this.imagePath }}" alt="clean hands sanitize"></a>
+        </figure>
+        {{/each}}
+    </section>
+
+<footer>
+    a website by don and john
+</footer>

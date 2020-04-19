@@ -6,10 +6,33 @@
                 <li><a href="categories">categories</a></li>
                 <li><a href="cart">my cart</a></li>
                 <li><a href="account">account</a></li>
-                <input class="search-bar" type="text" placeholder="search..."/>
+                <input class="search-bar" type="text" placeholder="search..." />
             </ul>
         </nav>
     </header>
-    
+
+    <div class="container-label">
+        <h4>My Cart</h4>
+    </div>
+
+
+    <section class="item-container">
+        {{#each data}}
+        <figure class="item">
+            <figcaption>{{this.itemName}}</figcaption>
+            <a href="/item/{{this._id}}/item-detail"><img src="{{ this.imagePath }}" alt="clean hands sanitize"></a>
+        </figure>
+        {{/each}}
+
+        <div class="break"></div>
+
+        <figure class="buy-btn">
+             <form action="/cart/add/{{data._id}}" method="POST">
+                 <a href="/"><button type="submit" formmethod="POST" class="btn">Place Order</button></a>
+             </form>
+        </figure>
+
+    </section>
+
     <footer></footer>
 </body>

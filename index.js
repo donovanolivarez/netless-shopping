@@ -8,7 +8,8 @@ const cookieParser = require('cookie-parser');
 const indexRoute = require('./routes/indexRoutes');
 const cartRouter = require('./routes/cartRoutes');
 const itemRouter = require('./routes/itemRoutes');
-const userRouter = require('./routes/userRoutes')
+const userRouter = require('./routes/userRoutes');
+const categoryRouter = require('./routes/categoryRoutes');
 const session = require('express-session');
 const passport = require('passport');
 const flash = require('connect-flash');
@@ -42,6 +43,7 @@ app.use(passport.session());
 app.use('/user', userRouter);
 app.use('/cart', cartRouter);
 app.use('/item', itemRouter);
+app.use('/categories', categoryRouter);
 app.use('/', indexRoute);
 app.use(express.static(path.join(__dirname, '/pub')));
 

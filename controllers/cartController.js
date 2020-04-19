@@ -13,26 +13,43 @@ exports.addToCart_get = function(req,res) {
 }
 
 exports.addToCart_post = function(req,res) {
-
-
     ItemModel.findById(req.params.id, ['-__v'], (err, docs) => {
         var totalPrice = CartModel.totalPrice || 0;
         var price = docs.toObject().itemPrice;
 
         var items = [docs.itemName, docs.itemPrice, docs.imagePath]
-        console.log(items)
 
         var nameObj = docs.toObject().itemName;
         var priceObj = docs.toObject().itemPrice;
         var imageObj = docs.toObject().imagePath;
 
          if (!err) {
+            
+            if ( cartIds === undefined || cartIds.length == 0) {
+                CartModel.create( {  itemName: nameObj, imagePath: imageObj, itemPrice: priceObj, items: docs.toObject()}, (err, result)=> {
+                    addCartId(result._id);
+                    printCartIds();
+                });
+            } else {
+
+            for( var i of cartIds) {
+                if (CartModel.findById(i).exists){
+                        CartModel.findById(i, (err, result)=> {
+                          result.items.push(docs);
+                          result.save();
+                        })
+                } else {
             CartModel.create( {  itemName: nameObj, imagePath: imageObj, itemPrice: priceObj, items: docs.toObject() }, (err, result)=> {
-                console.log(result._id); // store this somewhere.
-                addCartId(result._id.toString());
+                addCartId(result._id);
                 printCartIds();
             });
+        }
+    }
+        }
             res.redirect('/');
+         }
+         else {
+             console.log(err);
          }
    })
 } 

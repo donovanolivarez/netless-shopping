@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 
 //must connect to database
-mongoose.connect('mongodb://localhost:27017/netless', { useNewUrlParser: true, useUnifiedTopology: true}, (error) =>{
+mongoose.connect('mongodb://localhost:27017/netless', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false}, (error) =>{
     if (!error) {
         console.log('success');
     } else {
@@ -16,7 +16,7 @@ mongoose.connect('mongodb://localhost:27017/netless', { useNewUrlParser: true, u
 var items = [
     //done
     new Item({
-        imagePath: "https://lh3.googleusercontent.com/pbQ838bYGyDDlGWNE8TMj9hrUG6U8-0kpiXZwqoVTg6t4V5Yys-MTP2ZLviWQQTpu29FVhrdVQ_2M1hDlKUgSjW58nZczYIJbWZFkLvqXRLfp0ngnGU8uVy3w0Yaj9Fq44q3Ji51kQ=w2400",
+        imagePath: "https://lh3.googleusercontent.com/zp2HDvrXxVEwg9OecMVsP1xn7wgg1-KyFlsEOZ8VsGT1R2gl7wd3fc_anONyXGnW37F6i5vMg6KK_H_oaeGMBLpS5euoGvS6u_nghl9CY6O-XltkJXLx5s97Xo_0Tbz7zlaqLQJS0Q",
         itemName: "Toilet Paper",
         itemPrice: '10',
         itemCat: "cleaning",
@@ -40,6 +40,13 @@ var items = [
         description: "Smells great, too!"
     }),
 
+    new Item({
+        imagePath: "https://lh3.googleusercontent.com/-qxVOiVYjEG5Nizi0A9CZsqnOBvtfUV-WGyKIualApMCTaobXHWX5L59vjSvURqUwhpibYRYU2i-ZVTG-XipS2UQR6v3P_w5Mz0whDH-PnDocAHJwPwlZn0Gb-z-HDCypyx0P6GtSA=w2400",
+        itemName: "Laptop",
+        itemPrice: '150',
+        itemCat: "elec",
+        description: "A great item for when you need to work remotely."
+    }),
 
     /*
     new Item({

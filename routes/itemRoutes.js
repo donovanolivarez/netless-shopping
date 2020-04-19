@@ -1,12 +1,18 @@
 const express = require('express');
+// const csrf = require('csurf');
+// const csrfProtec = csrf();
 const router = express.Router();
+// router.use(csrfProtec);
 const itemController = require('../controllers/itemController');
 const mongoose = require('mongoose');
 const Cart = require('../models/cart');
 const Item = require('../models/item');
 ItemModel = mongoose.model('items');
 
+
+
 router.get('/:id/item-detail', itemController.itemDetail);
+
 
 
 /*

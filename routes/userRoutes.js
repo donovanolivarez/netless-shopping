@@ -1,8 +1,8 @@
 const express = require('express');
-const csrf = require('csurf');
+// const csrf = require('csurf');
 const router = express.Router();
-const csrfProtec = csrf();
-router.use(csrfProtec);
+// const csrfProtec = csrf();
+// router.use(csrfProtec);
 const passport = require('passport');
 const viewController = require('../controllers/viewController');
 

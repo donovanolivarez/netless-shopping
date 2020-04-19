@@ -38,6 +38,7 @@ exports.viewAllSchoolItems = function(req, res) {
 }
 
 exports.accountView = function(req,res) {
+    
     res.render('../views/account');
 }
 
@@ -45,7 +46,7 @@ exports.cartView = function(req,res) {
     CartModel.find( {}, function(err, docs) {
         var itemsInCart = [];
         for (var i = 0; i < docs.length; i ++){
-            console.log(docs[i]._id);
+            // console.log(docs[i]._id);
             for(var j = 0; j < docs[i].items.length; j ++) {
                 itemsInCart.push(docs[i].items[j]);
             }
@@ -54,7 +55,7 @@ exports.cartView = function(req,res) {
         if (itemsInCart === undefined || itemsInCart.length == 0){
             // render another view telling the user there are no items.
         } else {
-            res.render('../views/cart', {data: itemsInCart, layout: 'itemLayout'});
+            res.render('../views/cart', {items: itemsInCart, layout: 'itemLayout'});
         }
     }).lean();
 };

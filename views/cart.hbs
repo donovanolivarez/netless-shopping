@@ -17,7 +17,7 @@
 
 
     <section class="item-container">
-        {{#each data}}
+        {{#each items}}
         <figure class="item">
             <figcaption>{{this.itemName}}</figcaption>
             <a href="/item/{{this._id}}/item-detail"><img src="{{ this.imagePath }}" alt="clean hands sanitize"></a>
@@ -27,9 +27,9 @@
         <div class="break"></div>
 
         <figure class="buy-btn">
-             <form action="/cart/add/{{data._id}}" method="POST">
-                 <a href="/"><button type="submit" formmethod="POST" class="btn">Place Order</button></a>
-             </form>
+             <form action="/cart/order" method="POST">
+                 <a href="/"><button type="submit" class="btn">Place Order</button></a>
+             </form> 
         </figure>
 
     </section>

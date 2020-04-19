@@ -29,13 +29,14 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded( {extended: false}));
-app.use(validator()); 
+// app.use(validator()); 
+
 app.use(session({
     secret: 'supersecret', 
     resave: false, 
     saveUninitialized: false,
     store: new MongoStore({ mongooseConnection: mongoose.connection }),
-   // cookiee:
+    cookie: true
 }));
 app.use(flash());
 app.use(passport.initialize());

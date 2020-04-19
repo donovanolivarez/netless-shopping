@@ -31,7 +31,9 @@
         <div class="break"></div>
 
          <figure class="buy-btn">
-            <button class="btn">Add to cart</button>
+             <form action="/cart/add/{{data._id}}" method="POST">
+                 <a href="/"><button type="submit" formmethod="POST" class="btn">Add to cart</button></a>
+             </form>
         </figure>
     </section>
 

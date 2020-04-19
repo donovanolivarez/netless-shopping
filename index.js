@@ -34,15 +34,15 @@ app.use(session({
     resave: false, 
     saveUninitialized: false,
     store: new MongoStore({ mongooseConnection: mongoose.connection }),
-    cookie: { maxAge: 180 * 60 * 1000 }
+   // cookiee:
 }));
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 app.use('/user', userRouter);
-app.use('/', indexRoute);
 app.use('/cart', cartRouter);
 app.use('/item', itemRouter);
+app.use('/', indexRoute);
 app.use(express.static(path.join(__dirname, '/pub')));
 
 app.use((req,res, next)=> {

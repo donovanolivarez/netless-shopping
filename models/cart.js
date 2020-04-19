@@ -1,14 +1,20 @@
 const mongoose = require('mongoose');
 
 var CartSchema = new mongoose.Schema({
-    // imagePath: {type: String, required: true},
-    item: [],
-    itemName: { type: String, required: true },
-    itemPrice: { type: Number, required: true },
-    itemCat: { type: String },
-    description: {type: String}
+    itemName:String,
+    imagePath:String,
+    itemPrice:Number,
+    items: Array
+    /*
+    items: [{
+        itemName: String,
+        itemPrice:Number,
+        imagePath:String
+    }]
+    */
     // inStock : { type : String }
 });
+
 
 module.exports = mongoose.model('cart', CartSchema);
 

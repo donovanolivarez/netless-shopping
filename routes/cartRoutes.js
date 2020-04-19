@@ -8,7 +8,8 @@ const cartController = require('../controllers/cartController');
 
 // add to cart routes
 router.get('/add', cartController.addToCart_get);
-router.post('/delete', cartController.addToCart_post);
+router.post('/add/:id', cartController.addToCart_post);
+
 
 module.exports = router;
 

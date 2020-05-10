@@ -10,11 +10,11 @@ const cartRouter = require('./routes/cartRoutes');
 const itemRouter = require('./routes/itemRoutes');
 const userRouter = require('./routes/userRoutes');
 const categoryRouter = require('./routes/categoryRoutes');
-const session = require('express-session');
+// const session = require('express-session');
 const passport = require('passport');
 const flash = require('connect-flash');
 const validator = require('express-validator');
-const MongoStore = require('connect-mongo')(session);
+// const MongoStore = require('connect-mongo')(session);
 const app = express();
 require('./config/passport');
 
@@ -31,6 +31,8 @@ app.use(bodyparser.json());
 app.use(bodyparser.urlencoded( {extended: false}));
 // app.use(validator()); 
 
+
+/*
 app.use(session({
     secret: 'supersecret', 
     resave: false, 
@@ -38,9 +40,10 @@ app.use(session({
     store: new MongoStore({ mongooseConnection: mongoose.connection }),
     cookie: true
 }));
+*/
 app.use(flash());
 app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.session());
 app.use('/user', userRouter);
 app.use('/cart', cartRouter);
 app.use('/item', itemRouter);

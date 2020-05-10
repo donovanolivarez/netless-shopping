@@ -12,7 +12,13 @@
     </header>
 
     <div class="container-label">
-        <h4>My Cart</h4>
+        <h4>My Cart - ${{total}}</h4>
+    </div>
+
+    <div class="container-label">
+        {{#if cartEmptyCheck}}
+        <h4>{{message}}</h4>
+        {{/if}}
     </div>
 
 

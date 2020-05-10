@@ -15,6 +15,8 @@ const cartController = require('../controllers/cartController');
 // add to cart routes
 router.get('/add', cartController.addToCart_get);
 router.post('/add/:id', cartController.addToCart_post);
+router.post('/remove/:id', cartController.removeFromCart);
+router.post('/wishlist/:id', cartController.addToWishlist);
 
 // router.get('/add/order', cartController.placeOrder);
 router.post('/order', cartController.placeOrder);

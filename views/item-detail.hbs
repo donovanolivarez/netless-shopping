@@ -19,7 +19,7 @@
 
     <section class="item-container">
         <figure class="item-image">
-            <a href="/item/{{data._id}}/item-detail"><img src="{{ data.imagePath }}" alt="clean hands sanitize"></a>
+            <a href="/item/{{data._id}}/item-detail"><img src="{{ data.imagePath }}" alt="{{data.itemName}} picture. On this page you may add or remove this item from your cart."></a>
             <div class="break"></div>
         </figure>
 
@@ -35,6 +35,22 @@
                  <a href="/"><button type="submit" formmethod="POST" class="btn">Add to cart</button></a>
              </form>
         </figure>
+
+        <figure class="buy-btn">
+             <form action="/cart/wishlist/{{data._id}}" method="POST">
+                 <a href="/"><button type="submit" formmethod="POST" class="btn">Add to wishlist</button></a>
+             </form>
+        </figure>
+
+        {{#if inCartCheck}}
+
+        <figure class="buy-btn">
+             <form action="/cart/remove/{{data._id}}" method="POST">
+                 <a href="/"><button type="submit" formmethod="POST" class="btn">Remove from cart</button></a>
+             </form>
+        </figure>
+
+        {{/if}}
     </section>
 
     <footer>

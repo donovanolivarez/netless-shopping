@@ -20,7 +20,7 @@
         {{#each data}}
         <figure class="item">
             <figcaption>{{this.itemName}}</figcaption>
-            <a href="/item/{{this._id}}/item-detail"><img src="{{ this.imagePath }}" alt="clean hands sanitize"></a>
+            <a href="/item/{{this._id}}/item-detail"><img src="{{ this.imagePath }}" alt="{{this.itemName}} picture. Click to view more details"></a>
         </figure>
         {{/each}}
     </section>
